@@ -1,31 +1,48 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+<div>
+  <a href="/dashboard/newpost">
+    <h2>
+      Add Post
+    </h2>
+  </a>
+</div>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+  <section>
+    <h2>Your Posts</h2>
 
-<script src="/javascript/add-post.js"></script>
+    <ol>
+      {{#each posts as |post|}}
+        <li>
+          <article>
+            <div>
+              <a href="/post/{{id}}">
+                <h2>
+                  {{title}}
+                </h2>
+              </a>
+              <div class="card-meta">
+                <div>
+                  Created by
+                  <strong>{{user.username}}</strong>
+                  on
+                  {{format_date created_at}}
+                </div>
+                <div>
+                  <a href="/post/{{id}}">{{comments.length}}
+                    {{format_plural "comment" comments.length}}</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              {{post_content}}
+            </div>
+            <div class="card-footer">
+              <a href="/dashboard/edit/{{post.id}}" class="edit-link">
+              </a>
+            </div>
+          </article>
+        </li>
+      {{/each}}
+    </ol>
+  </section>
+{{/if}}
