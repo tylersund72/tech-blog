@@ -10,12 +10,8 @@
   --light-grey: #A0A3A5;
 }
 
-body, html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-  color: #333;
+body{
+  background-color: var(--light-green);
 }
 
 a {
@@ -123,7 +119,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 1%;
+  padding: 5%;
   width: 100%;
 }
 
