@@ -116,11 +116,29 @@ form label {
 }
 
 header {
+  background-color: var(--dark-red);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5%;
   width: 100%;
+  min-height: 8rem;
+}
+
+nav {
+  font-size: 1.5rem;
+  top: 0;
+  right: 0;
+  width: 10rem;
+  height: 5rem;
+}
+
+header a {
+  color: var(--light-green);
+}
+
+nav li a {
+  color: var(--light-green);
 }
 
 header h1 {
