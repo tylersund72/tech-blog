@@ -25,15 +25,19 @@
           <li>
             <a href="/login">Login</a>
           </li>
+          {{/if}}
         </ul>
       </nav>
+
+      <a href="/"><h1 class="hero-title">The Tech Blog</h1></a>
+
     </header>
     <main>
       {{#if loggedIn}}
       {{else}}
-      <div>
-        <div>
-          <div>
+      <div class="card" id="entry-card">
+        <div class="card-header" id="entry-header">
+          <div class="card-name" id="entry-title">
             <h2>Welcome to my Tech Blog.</h2>
           </div>
         </div>
