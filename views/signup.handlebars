@@ -1,26 +1,31 @@
-<div>
-  <div>
+<div class="card">
+  <div class="card-header">
     <h3>Sign Up</h3>
   </div>
-</div>
-<div>
-  <form>
-    <div>
-      <label for="username-signup">Username</label>
-      <input id="username-signup" type="text" />
-    </div>
-    <div>
-      <label for="email-signup">Email</label>
-      <input id="email-signup" type="text" />
-    </div>
-    <div>
-      <label for="password-signup">Password</label>
-      <input id="password-signup" type="text" />
-    </div>
-    <div>
-      <button type="submit">Click here to submit your profile</button>
-    </div>
-  </form>
+  <div class="card-body">
+    <form class="sign-up-form">
+      <div>
+        <label for="username-signup">Username</label>
+        <input id="username-signup" type="text" />
+      </div>
+      <div>
+        <label for="email-signup">Email</label>
+        <input id="email-signup" type="text" />
+      </div>
+      <div>
+        <label for="password-signup">Password</label>
+        <input id="password-signup" type="text" />
+      </div>
+      <div>
+        <button type="submit">Click here to submit your profile!</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    If you already have an account,
+    <a href="/login">log in</a>
+    instead.
+  </div>
 </div>
 
-<script src="/public/javascript/signup.js"></script>
+<script src="/javascript/signup.js"></script>

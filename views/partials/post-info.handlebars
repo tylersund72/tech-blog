@@ -1,11 +1,11 @@
 <article class="card">
-  <div class="entry-header">
+  <div class="card-header">
     <a href="/post/{{id}}">
     <h2 class="card-name">
       {{title}}
     </h2>
    </a>
-  <div class="meta">
+  <div class="card-meta">
     <div>
       Posted by {{user.username}} on {{format_date created_at}}
     </div>
@@ -13,7 +13,7 @@
       <a href="/post{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </div>
   </div>
-  <div>
+  <div class="card-body">
     {{post_content}}
   </div>
 </article>

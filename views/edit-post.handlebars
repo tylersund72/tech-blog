@@ -1,14 +1,14 @@
-  <a href="/dashboard"> &larr; Back to dashboard</a>
+<a href="/dashboard"> &larr; Back to dashboard</a>
 
 <article>
-  <div>
-    <div>
-      <h2>
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-name">
         Edit Post
       </h2>
-      <div>
+      <div class="card-meta">
         <div>
-          Posted by {{post.user.username}} on {{format_date post.created_at}}
+          Created by {{post.user.username}} on {{format_date post.created_at}}
         </div>
         <div>
           <a href="/post{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}} </a>
@@ -16,18 +16,18 @@
       </div>
     </div>
   </div>
-  <div>
+  <div class="card-body">
   <form class="edit-post-form">
     <div>
       <label for="post-title">Title</label>
-      <input id="title-edit" name="post-title" type="text" value="{{post.title}}"/>
-      <label id="content-edit" for="post-content">Content of post</label>
+      <input id="edit-title" name="post-title" type="text" value="{{post.title}}"/>
+      <label id="edit-content" for="post-content">Content of post</label>
       <textarea name="post-content">{{post.post_content}}</textarea>
     </div>
       <button type="submit">Update the post</button>
       <button type="button" class="post-btn-del">Delete the post</button>
     <div>
-        <button type="submit">Save post</button>
+        <button type="submit">Save changes to post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
       </form>
     </div>
@@ -36,7 +36,7 @@
 
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea id="comment-body" name="comment-body"></textarea>
   </div>
 
   <div>
