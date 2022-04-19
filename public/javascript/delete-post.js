@@ -1,5 +1,3 @@
-const { DELETE } = require("sequelize/types/lib/query-types");
-
 async function deleteFormHandler(event) {
   event.preventDefault();
 
@@ -10,7 +8,7 @@ async function deleteFormHandler(event) {
   const verifyDelete = confirm("Delete?");
 
   if (verifyDelete) {
-    const response = await fetch(`/api/posts${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: "DELETE",
     });
 
